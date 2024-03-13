@@ -13,19 +13,24 @@
         android:text="@string/text_name"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toStartOf="@id/iv_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_greetings"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_greeting"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toStartOf="@id/iv_menu"
         android:text="@string/text_greetings"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
@@ -36,9 +41,8 @@
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_menu"
         android:layout_marginHorizontal="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_greetings"
         app:layout_constraintEnd_toStartOf="@+id/iv_profile"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tv_name" />
 
     <ImageView
         android:id="@+id/iv_profile"
@@ -46,9 +50,8 @@
         android:layout_height="40dp"
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_profile"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_greetings"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/tv_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
